@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://JeffAbney:warhol88@cluster0-schfu.mongodb.net/test?retryWrites=true";
+const uri = process.env.MONGODB_URI;
 
 // Handle Sign In
 app.post('/', (req, res) => {
